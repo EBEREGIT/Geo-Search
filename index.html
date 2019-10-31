@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Fredoka+One|Graduate&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Geo Search</title>
+  </head>
+  <body>
+      <!-- header -->
+    <header></header>
+
+    <!-- side bar -->
+    <section></section>
+
+    <!-- main page -->
+    <main></main>
+
+    <!-- footer here -->
+    <footer></footer>
+
+    <!-- JQuery included here -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- include files here -->
+    <script>
+      $(function() {
+        $("header").load("nav.html");
+        $("section").load("sidebar.html");
+        $("main").load("main.html");
+        $("footer").load("footer.html");
+      });
+    </script>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
