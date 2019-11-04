@@ -14,7 +14,7 @@
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      integrity="sha384-wvfXpqpZZVQGK6TAh4PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
 
@@ -28,12 +28,25 @@
       <header></header>
 
       <!-- side bar -->
-      <section></section>
+      <section>
+        <span
+          ><h4>Wind Speed:</h4>
+          <p>5m/s</p>
+          <hr
+        /></span>
+        <span
+          ><h4>Humidity:</h4>
+          <p>5ms</p>
+          <hr
+        /></span>
+        <span
+          ><h4>Current Weather Condition:</h4>
+          <p>cloudy</p></span
+        >
+      </section>
 
       <!-- main page -->
-      <main>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.574835216074!2d7.53278234899177!3d6.448593095311774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a5922dd53b03%3A0xee33969abfcfd5f!2sTechX%20Innovation%20Hub!5e0!3m2!1sen!2sng!4v1572874920705!5m2!1sen!2sng" frameborder="0" allowfullscreen=""></iframe>
-      </main>
+      <main></main>
 
       <!-- footer here -->
       <footer></footer>
@@ -50,7 +63,7 @@
         $(function() {
           $("header").load("nav.html");
           // $("section").load("sidebar.html");
-          // $("main").load("main.html");
+          $("main").load("main.html");
           // $("footer").load("footer.html");
         });
       </script>
