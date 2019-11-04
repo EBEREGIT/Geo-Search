@@ -70,8 +70,22 @@ nav {
 
 section {
     grid-area: s;
+    margin-left: 5%;
 }
 
+section hr{
+    width: 60%;
+    text-align: left;
+    margin: 0;
+}
+
+section h4{
+    color: #3446eb;
+    margin-bottom: -5%;
+    margin-top: 0;
+}
+
+/* main */
 main {
     grid-area: m;
 }
