@@ -76,6 +76,12 @@ main {
     grid-area: m;
 }
 
+main iframe {
+    width: 100%; 
+    height: 100vh; 
+    border: 0;
+}
+
 footer {
     grid-area: f;
 }
