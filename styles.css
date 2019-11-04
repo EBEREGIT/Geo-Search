@@ -1,24 +1,67 @@
 body {
     font-family: "Darker Grotesque";
     font-size: 1.4em;
-    color: white;
-    text-align: center;
 }
 
 .container {
     display: grid;
-    /* grid-template: repeat(3, 1fr) / repeat(4, 1fr); */
     grid-template-areas: 
-        "h h h h"
+        "s h h h"
         "s m m m"
         "f f f f"
     ;
 }
 
+/* header */
 header {
     grid-area: h;
-    background-color: #D0021B;
-    height: 100px;
+    text-align: center;
+}
+
+header h1{
+    color: #3446eb;
+    font-weight: bolder;
+    font-family: Graduate;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+header p{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.8rem;
+}
+
+header p span{
+    padding-left: 3px;
+}
+
+header p span i{
+    color: #000000;
+}
+
+header input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    color: gray;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+}
+
+header input:focus {
+    outline: none;
+}
+
+header input[type="submit"]{
+    background: #3446eb;
+    color: #ffffff;
+}
+
+header h1{
+    margin: 0;
 }
 
 nav {
@@ -27,15 +70,18 @@ nav {
 
 section {
     grid-area: s;
-    background-color: #9013FE;
 }
 
 main {
     grid-area: m;
-    background-color: #F8E71C;
+}
+
+main iframe {
+    width: 100%; 
+    height: 100vh; 
+    border: 0;
 }
 
 footer {
     grid-area: f;
-    background-color: #50E3C2;
 }
