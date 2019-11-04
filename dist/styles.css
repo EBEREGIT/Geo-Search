@@ -1,15 +1,13 @@
 body {
     font-family: "Darker Grotesque";
     font-size: 1.4em;
-    color: white;
-    text-align: center;
 }
 
 .container {
     display: grid;
     /* grid-template: repeat(3, 1fr) / repeat(4, 1fr); */
     grid-template-areas: 
-        "h h h h"
+        "s h h h"
         "s m m m"
         "f f f f"
     ;
@@ -17,8 +15,33 @@ body {
 
 header {
     grid-area: h;
-    background-color: #D0021B;
-    height: 100px;
+    text-align: center;
+    font-family: Graduate;
+}
+
+header h1{
+    color: #3446eb;
+    font-weight: bolder;
+    padding-bottom: 1%;
+}
+
+header input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #3446eb;
+    text-transform: capitalize;
+    color: grey;
+}
+
+header input[type="submit"]{
+    background: #3446eb;
+    color: #ffffff;
+}
+
+header h1{
+    margin: 0;
 }
 
 nav {
@@ -27,15 +50,12 @@ nav {
 
 section {
     grid-area: s;
-    background-color: #9013FE;
 }
 
 main {
     grid-area: m;
-    background-color: #F8E71C;
 }
 
 footer {
     grid-area: f;
-    background-color: #50E3C2;
 }
