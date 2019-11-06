@@ -6,9 +6,9 @@ body {
 .container {
     display: grid;
     grid-template-areas: 
-        "s h h h"
-        "s m m m"
-        "f f f f"
+        "s h h h h h"
+        "s m m m m m"
+        "f f f f f f"
     ;
 }
 
@@ -16,6 +16,7 @@ body {
 header {
     grid-area: h;
     text-align: center;
+    margin-left: 0;
 }
 
 header h1{
@@ -71,6 +72,7 @@ nav {
 section {
     grid-area: s;
     margin-left: 5%;
+    margin-right: 0;
 }
 
 section hr{
@@ -83,6 +85,23 @@ section h4{
     color: #3446eb;
     margin-bottom: -5%;
     margin-top: 0;
+}
+
+section form{
+    margin-top: 5%;
+}
+
+section input{
+    width: 150px;
+    height: 25px;
+    border-radius: 6px;
+    border: 1px solid #3446eb;
+    margin: 2%;
+    font-size: 0.8rem;
+}
+
+section input:focus{
+    outline: none;
 }
 
 /* main */
