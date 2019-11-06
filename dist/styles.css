@@ -104,6 +104,19 @@ section input:focus{
     outline: none;
 }
 
+section #share-btn{
+    width: 7em;
+    height: 3em;
+    border: none;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+    background: #3446eb;
+    font-size: 1em;
+}
+
 /* main */
 main {
     grid-area: m;
