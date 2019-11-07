@@ -40,6 +40,7 @@ main input {
     color: gray;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
     padding-left: 20px;
+    cursor: pointer;
 }
 
 main input:focus {
@@ -61,7 +62,7 @@ nav {
 
 section {
     grid-area: s;
-    margin-left: 5%;
+    margin-left: 1%;
     margin-right: 5%;
 }
 
@@ -79,6 +80,8 @@ section h4{
 
 section form{
     margin-top: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 section input{
@@ -87,6 +90,7 @@ section input{
     border: 1px solid #3446eb;
     margin: 2%;
     font-size: 0.8rem;
+    padding-left: 10px;
 }
 
 section input:focus{
@@ -94,7 +98,7 @@ section input:focus{
 }
 
 section #share-btn{
-    width: 7em;
+    width: 200%;
     height: 3em;
     border: none;
     border: none;
@@ -137,3 +141,69 @@ footer p span{
 footer p span i{
     color: #000000;
 }
+
+@media screen and (min-width:401px) and (max-width:900px){
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "h h h h h h"
+            "m m m m m m"
+            "s s s s s s"
+            "f f f f f f"
+        ;
+    }
+
+    section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    section h4{
+        margin-bottom: -3%;
+    }
+
+    section form{
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    section #share-btn{
+        width: 100%;
+        height: 2em;
+    }
+
+  }
+
+
+/* media query for small devices */
+@media screen and (max-width: 400px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "h h h h h h"
+            "m m m m m m"
+            "s s s s s s"
+            "f f f f f f"
+        ;
+    }
+
+    header #geo-search-logo{
+        width: 70%;
+    }
+
+    section #share-btn{
+        width: 100%;
+        height: 2em;
+    }
+
+    main form{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    footer {
+        margin-top: 5%;
+        letter-spacing: 0;
+    }
+  }
