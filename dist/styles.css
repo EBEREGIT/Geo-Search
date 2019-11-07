@@ -142,6 +142,7 @@ footer p span i{
     color: #000000;
 }
 
+/* media queries for tablet */
 @media screen and (min-width:401px) and (max-width:900px){
     .container {
         display: grid;
