@@ -1,1 +1,1 @@
-"use strict";
+"use strict";function initMap(){document.querySelector("#search-form");var e=document.querySelector("#address");(new google.maps.Geocoder).geocode({address:e.value},function(e,o){"OK"===o?console.log(resultsMap.setCenter(e[0].geometry.location)):alert("Geocode was not successful for the following reason: "+o)})}

@@ -5,6 +5,7 @@ const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 const runSequence = require("run-sequence");
 const browserSync = require("browser-sync").create();
+const eslint = require("gulp-eslint");
 
 // tasks
 gulp.task("processHTML", () => {
@@ -18,15 +19,12 @@ gulp.task("processCSS", () => {
 gulp.task("processJS", () => {
   gulp
     .src("*.js")
-    .pipe(
-      jshint({
-        esversion: 6
-      })
-    )
-    .pipe(jshint.reporter("default"))
+    .pipe(eslint({configFile: 'eslintrc.json'}))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .pipe(
       babel({
-        presets: ["env"]
+        "presets": ["@babel/preset-env"]
       })
     )
     .pipe(uglify())
@@ -49,11 +47,16 @@ gulp.task("watch", ["browserSync"], () => {
   gulp.watch("*.css", ["processCSS"]);
 
   gulp.watch("dist/*.js", browserSync.reload);
+  gulp.watch("dist/*.css", browserSync.reload);
   gulp.watch("dist/*.html", browserSync.reload);
 });
 
 gulp.task("default", callback => {
-  runSequence(["processHTML", "processCSS", "processJS", "babelPolyfill"], "watch", callback);
+  runSequence(
+    ["processHTML", "processCSS", "processJS", "babelPolyfill"],
+    "watch",
+    callback
+  );
 });
 
 gulp.task("browserSync", () => {
