@@ -17,16 +17,22 @@
   },
   "homepage": "https://github.com/EBEREGIT/Geo-Search#readme",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-jshint": "^2.1.0",
     "gulp-uglify": "^3.0.2",
-    "jshint": "^2.10.2",
+    "jshint": "^2.10.3",
+    "regenerator-runtime": "^0.13.3",
     "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp-eslint": "^6.0.0"
   }
 }
