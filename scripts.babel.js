@@ -1,9 +1,12 @@
 // initiate the map here
 function initMap() {
+  // set initial cordinates 
+  var cordinates = {lat:  6.459964, lng: 7.548949};
+
   // create an instance of Map class
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
-    center: {lat:  6.459964, lng: 7.548949}
+    center: cordinates
   });
 
   // create an instance of Geocoder class 
@@ -14,6 +17,9 @@ function initMap() {
     e.preventDefault();
     geocodeAddress(geocoder, map);
   });
+  
+  // add a customized marker
+  var marker = new google.maps.Marker({position: cordinates, map: map});
 }
 
 // geocoding here
