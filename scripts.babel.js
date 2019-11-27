@@ -31,7 +31,7 @@ function geocodeAddress(geocoder, resultsMap) {
       // get the cordinates here
       let newCordinates = results[0].geometry.location;
       console.log(newCordinates[0]);
-      
+
       // place cordinates as the center of the map
       resultsMap.setCenter(newCordinates);
       // place the marker on the location here
@@ -54,7 +54,6 @@ function weatherCondition(location) {
   const windSpeed = document.querySelector("#wind-speed");
   const humidity = document.querySelector("#humidity");
   const weatherSection = document.querySelector("#weather-condition");
-  const celcius = document.querySelector("#celcius");
   const errorSection = document.querySelector("#error");
 
   // prepare request
@@ -84,14 +83,51 @@ function weatherCondition(location) {
       errorSection.textContent = "";
       // retrieve and convert API response from string to JSON
       const response = JSON.parse(apiRequest.response);
+
       // display weather here
-      console.log(response);
-      
       windSpeed.textContent = response.wind.speed + "m/s";
-
       humidity.textContent = response.main.humidity + "%";
+      weatherSection.textContent =
+        response.weather[0].main + " (" + response.weather[0].description + ")";
 
-      weatherSection.textContent = response.weather[0].main + " (" + response.weather[0].description + ")";
+      // convert temperature
+      temperatureDisplay(response);
     }
   };
+}
+
+// handle temperature conversion
+function temperatureDisplay(response) {
+  const celcius = document.querySelector("#celcius");
+  const fahrenheit = document.querySelector("#fahrenheit");
+  
+  // display temperature here
+  celcius.value = response.main.temp;
+  fahrenheit.value = celciusToFahrenheit(celcius.value);
+
+  // convert temp when a user changes the value
+  celcius.addEventListener('keyup', function(e) {
+    let cel = e.target.value;    
+    let fah = (cel * (9/5)) + 32;
+    fahrenheit.value = fah;
+  });
+
+  // convert temp when a user changes the value
+  fahrenheit.addEventListener('keyup', function(e) {
+    let fah = e.target.value;    
+    let cel = (fah - (32)) + (5/9);
+    celcius.value = cel;
+  });
+}
+
+// convert from celcius To fahrenheit
+function celciusToFahrenheit(celciusTemperation) {
+  let fahrenheit = (celciusTemperation * (9/5)) + 32;
+  return fahrenheit;  
+}
+
+// convert from fahrenheit To celcius
+function fahrenheitToCelcius(fahrenheitTemperation) {
+  let celcius = (fahrenheitTemperation - (32)) + (5/9);
+  return celcius;
 }
