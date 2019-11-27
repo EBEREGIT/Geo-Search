@@ -114,6 +114,11 @@ main {
     grid-area: m;
 }
 
+main #error {
+    background: red;
+    color: white;
+}
+
 main #map {
     width: 100%; 
     height: 100vh; 
