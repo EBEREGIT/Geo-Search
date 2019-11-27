@@ -25,8 +25,7 @@ function initMap() {
 // geocoding here
 function geocodeAddress(geocoder, resultsMap) {
   // get the vlaue of the address input
-  var addressInput = document.getElementById("address");
-  var address = addressInput.value;
+  var address = document.getElementById("address").value;
   
   // convert the address to cordinates here
   geocoder.geocode({ address: address }, function(results, status) {
