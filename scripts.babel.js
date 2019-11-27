@@ -17,13 +17,16 @@ function initMap() {
   // add a customized marker
   mapMarker(map, cordinates);
   weatherCondition("Enugu");
+
+  // autocomplete search string
+  new google.maps.places.Autocomplete(address);
 }
 
 // geocoding here
 function geocodeAddress(geocoder, resultsMap) {
   // get the vlaue of the address input
   var address = document.getElementById("address").value;
-
+  
   // convert the address to cordinates here
   geocoder.geocode({ address: address }, function(results, status) {
     // check the status. If OK, get the cordinates
