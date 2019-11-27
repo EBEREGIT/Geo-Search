@@ -64,6 +64,7 @@ section {
     grid-area: s;
     margin-left: 1%;
     margin-right: 5%;
+    font-weight: bolder;
 }
 
 section hr{
@@ -76,6 +77,14 @@ section h4{
     color: #3446eb;
     margin-bottom: -5%;
     margin-top: 0;
+}
+
+section #weather-condition {
+    text-transform: capitalize;
+}
+
+section form .unit{
+    font-size: medium;
 }
 
 section form{
@@ -112,6 +121,11 @@ section #share-btn{
 /* main */
 main {
     grid-area: m;
+}
+
+main #error {
+    background: red;
+    color: white;
 }
 
 main #map {

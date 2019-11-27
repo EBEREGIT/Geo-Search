@@ -1,21 +1,21 @@
 <!-- wind speed -->
 <span
   ><h4>Wind Speed:</h4>
-  <p>5m/s</p>
+  <p id="wind-speed"></p>
   <hr
 /></span>
 
 <!-- Humidity -->
 <span
   ><h4>Humidity:</h4>
-  <p>5ms</p>
+  <p id="humidity"></p>
   <hr
 /></span>
 
 <!-- Current Weather Condition -->
 <span
   ><h4>Current Weather Condition:</h4>
-  <p>cloudy</p>
+  <p id="weather-condition"></p>
   <hr
 /></span>
 
@@ -23,7 +23,7 @@
 <span
   ><h4>Temperature:</h4>
   <form action="">
-    <label for="celcius">Celcius: </label>
+    <label for="celcius">Celcius <span class="unit">(&#8451;)</span>: </label>
     <input
       type="text"
       name="celcius"
@@ -31,12 +31,12 @@
       placeholder="Celcius Temperature"
     />
 
-    <label for="ferinheit">Ferinheit: </label>
+    <label for="fahrenheit">Fahrenheit <span class="unit">(&#8457;)</span>: </label>
     <input
       type="text"
-      name="ferinheit"
-      id="ferinheit"
-      placeholder="Ferinheit Temperature"
+      name="fahrenheit"
+      id="fahrenheit"
+      placeholder="Fahrenheit Temperature"
     />
   </form>
   <hr />
