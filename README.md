@@ -18,7 +18,7 @@ Geo-Search is a tool that allows people to search for places and extract informa
 * Navigate into the folder
 * Open a terminal from the folder
 * Run <code>npm install</code> to ensure that depencies are up to date
-* open the <code>gulp</code> in any browser
+* Run the <code>gulp</code>
 * Wait a few seconds or minutes to see project open in your default browser on <code>port 8088</code>
 
 ### on the internet
